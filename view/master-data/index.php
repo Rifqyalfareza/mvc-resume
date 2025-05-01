@@ -14,6 +14,7 @@
         </li>
     </ul>
 </div>
+<p>hallo</p>
 <div id="default-styled-tab-content">
     <div class="hidden rounded-lg p-2 dark:bg-gray-800" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
         <?php include './view/customer/index.php';?>
