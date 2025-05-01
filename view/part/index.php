@@ -1,6 +1,6 @@
 <div>
     <div class="flex items-center justify-between mb-4">
-        <h2 class="text-gray-600 text-2xl font-bold ">Data Customer</h2>
+        <h2 class="text-gray-600 text-2xl font-bold ">Data Part</h2>
         <button type="button" data-modal-target=modal-tambah data-modal-toggle=modal-tambah class="flex items-center gap-2 text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium text-sm px-2 py-2 text-center  dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />

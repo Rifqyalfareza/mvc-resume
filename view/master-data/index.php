@@ -16,15 +16,49 @@
 </div>
 <div id="default-styled-tab-content">
     <div class="hidden rounded-lg p-2 dark:bg-gray-800" id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
-        <?php include './view/customer/index.php';?>
+        <?php include './view/customer/index.php'; ?>
     </div>
-    <div class="hidden p-2 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-        <?php include './view/part/index.php';?>
+    <div class="hidden p-2 rounded-lg  dark:bg-gray-800" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+        <?php include './view/part/index.php'; ?>
     </div>
-    <div class="hidden p-2 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
+    <div class="hidden p-2 rounded-lg  dark:bg-gray-800" id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
         <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
-    <div class="hidden p-2 rounded-lg bg-gray-50 dark:bg-gray-800" id="styled-contacts" role="tabpanel" aria-labelledby="contacts-tab">
+    <div class="hidden p-2 rounded-lg  dark:bg-gray-800" id="styled-contacts" role="tabpanel" aria-labelledby="contacts-tab">
         <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tabButtons = document.querySelectorAll('[data-tabs-target]');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const targetSelector = button.getAttribute("data-tabs-target");
+                const targetPanel = document.querySelector(targetSelector);
+
+                // Cari semua tabel di dalam tab yang ditampilkan
+                const tables = targetPanel.querySelectorAll("table");
+
+                tables.forEach(table => {
+                    if (!table.dataset.datatableInitialized) {
+                        new simpleDatatables.DataTable(table);
+                        table.dataset.datatableInitialized = "true";
+                    }
+                });
+            });
+        });
+
+        // Opsional: inisialisasi tab pertama (Customer) saat page load
+        const firstPanel = document.querySelector("#styled-profile");
+        const initialTables = firstPanel.querySelectorAll("table");
+
+        initialTables.forEach(table => {
+            if (!table.dataset.datatableInitialized) {
+                new simpleDatatables.DataTable(table);
+                table.dataset.datatableInitialized = "true";
+            }
+        });
+    });
+</script>
