@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,16 +12,18 @@
     <!-- Flowbite JS -->
     <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
+    <script src="node_modules/preline/preline.js"></script>
 </head>
 
 <body class="bg-gray-100">
     <?php include 'src/components/navbar.php'; ?>
     <?php include 'src/components/sidebar.php'; ?>
     <div class="p-4 sm:ml-64">
-        <div class="p-4 bg-white border-gray-200 border  rounded-lg dark:border-gray-700 mt-14">
+        <div class="rounded-lg bg-white dark:border-gray-700 mt-14">
             <?php include 'routes/app.php'; ?>
         </div>
     </div>
 </body>
 
 </html>
+<?php ob_end_flush(); ?>

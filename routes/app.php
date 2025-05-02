@@ -8,10 +8,6 @@ switch ($page) {
     case 'part':
         include './view/part/index.php';
         break;
-    case 'master-data':
-        include './view/master-data/index.php';
-        break;
-
     case 'edit':
         include './view/customer/edit.php';
         break;
