@@ -1,39 +1,35 @@
-<div>
+<div class="pb-8">
     <div class="flex items-center justify-between mb-8 px-8 pt-8">
         <h2 class="text-gray-600 text-2xl font-bold ">Data Customer</h2>
         <?php include 'create.php'; ?>
-        <button type="button" data-modal-target=modal-tambah data-modal-toggle=modal-tambah class="flex items-center gap-2 text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium text-sm px-2 py-2 text-center  dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">
+        <button type="button" data-tooltip-target="tooltip-dark-add" data-modal-target=modal-tambah data-modal-toggle=modal-tambah class="flex items-center gap-2 text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium text-sm px-2 py-2 text-center  dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />
             </svg>
             Create
         </button>
+        <div id="tooltip-dark-add" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+            Create Customer
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
     </div>
     <div class="bg-white px-8 rounded-lg">
         <nav class="flex mb-8" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                 <li class="inline-flex items-center">
                     <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
-                        <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-3 h-3 ms-1 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                             <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
                         </svg>
                         Home
                     </a>
-                </li>
-                <li>
-                    <div class="flex items-center">
-                        <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-                        </svg>
-                        <a href="#" class="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Projects</a>
-                    </div>
                 </li>
                 <li aria-current="page">
                     <div class="flex items-center">
                         <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
                         </svg>
-                        <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Flowbite</span>
+                        <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Customer</span>
                     </div>
                 </li>
             </ol>
@@ -42,32 +38,24 @@
             <thead>
                 <tr>
                     <th>
-                        <span class="flex items-center">
-                            Name
-                            <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
-                            </svg>
-                        </span>
-                    </th>
-                    <th data-type="date" data-format="YYYY/DD/MM">
-                        <span class="flex items-center">
-                            Release Date
+                        <span class="flex items-center  text-blue-400 hover:text-blue-600">
+                            Customer
                             <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
                             </svg>
                         </span>
                     </th>
                     <th>
-                        <span class="flex items-center">
-                            NPM Downloads
+                        <span class="flex items-center text-blue-400 hover:text-blue-600">
+                            Singkatan
                             <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
                             </svg>
                         </span>
                     </th>
-                    <th>
-                        <span class="flex items-center">
-                            Growth
+                    <th class="text-center">
+                        <span class="flex items-center text-blue-400 hover:text-blue-600">
+                            Aksi
                             <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
                             </svg>
@@ -76,200 +64,83 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Flowbite</td>
-                    <td>2021/25/09</td>
-                    <td>269000</td>
-                    <td>49%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">React</td>
-                    <td>2013/24/05</td>
-                    <td>4500000</td>
-                    <td>24%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Angular</td>
-                    <td>2010/20/09</td>
-                    <td>2800000</td>
-                    <td>17%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Vue</td>
-                    <td>2014/12/02</td>
-                    <td>3600000</td>
-                    <td>30%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Svelte</td>
-                    <td>2016/26/11</td>
-                    <td>1200000</td>
-                    <td>57%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Ember</td>
-                    <td>2011/08/12</td>
-                    <td>500000</td>
-                    <td>44%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Backbone</td>
-                    <td>2010/13/10</td>
-                    <td>300000</td>
-                    <td>9%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">jQuery</td>
-                    <td>2006/28/01</td>
-                    <td>6000000</td>
-                    <td>5%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bootstrap</td>
-                    <td>2011/19/08</td>
-                    <td>1800000</td>
-                    <td>12%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Foundation</td>
-                    <td>2011/23/09</td>
-                    <td>700000</td>
-                    <td>8%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Bulma</td>
-                    <td>2016/24/10</td>
-                    <td>500000</td>
-                    <td>7%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Next.js</td>
-                    <td>2016/25/10</td>
-                    <td>2300000</td>
-                    <td>45%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Nuxt.js</td>
-                    <td>2016/16/10</td>
-                    <td>900000</td>
-                    <td>50%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Meteor</td>
-                    <td>2012/17/01</td>
-                    <td>1000000</td>
-                    <td>10%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Aurelia</td>
-                    <td>2015/08/07</td>
-                    <td>200000</td>
-                    <td>20%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Inferno</td>
-                    <td>2016/27/09</td>
-                    <td>100000</td>
-                    <td>35%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Preact</td>
-                    <td>2015/16/08</td>
-                    <td>600000</td>
-                    <td>28%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Lit</td>
-                    <td>2018/28/05</td>
-                    <td>400000</td>
-                    <td>60%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Alpine.js</td>
-                    <td>2019/02/11</td>
-                    <td>300000</td>
-                    <td>70%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Stimulus</td>
-                    <td>2018/06/03</td>
-                    <td>150000</td>
-                    <td>25%</td>
-                </tr>
-                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                    <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white">Solid</td>
-                    <td>2021/05/07</td>
-                    <td>250000</td>
-                    <td>80%</td>
-                </tr>
+                <?php foreach ($customers as $customer) : ?>
+                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
+                        <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white"><?= $customer['nama_customer'] ?></td>
+                        <td><?= $customer['singkatan'] ?></td>
+                        <td class="flex gap-2 text-center justify-center">
+                            <button type="button" 
+                                data-tooltip-target="tooltip-edit-<?= $customer['id_customer'] ?>" 
+                                data-tooltip-placement="top" 
+                                data-modal-target=modal-edit
+                                data-modal-toggle=modal-edit
+                                data-id="<?= $customer['id_customer'] ?>"
+                                data-customer="<?= $customer['nama_customer'] ?>"
+                                data-singkatan="<?= $customer['singkatan'] ?>"
+                                class="bg-blue-500 hover:bg-blue-700 p-1">
+                                <svg class="w-5 h-5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.779 17.779 4.36 19.918 6.5 13.5m4.279 4.279 8.364-8.643a3.027 3.027 0 0 0-2.14-5.165 3.03 3.03 0 0 0-2.14.886L6.5 13.5m4.279 4.279L6.499 13.5m2.14 2.14 6.213-6.504M12.75 7.04 17 11.28" />
+                                </svg>
+                            </button>
+                            <div id="tooltip-edit-<?= $customer['id_customer'] ?>" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                                Edit Customer
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <a href="#" 
+                                class="bg-red-500 hover:bg-red-600 p-1" 
+                                data-tooltip-target="tooltip-delete-<?= $customer['id_customer'] ?>" 
+                                data-tooltip-placement="top"
+                                onclick="confirm(<?= $customer['id_customer'] ?>)">
+                                <svg class="w-5 h-5 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
+                                </svg>
+                            </a>
+                            <div id="tooltip-delete-<?= $customer['id_customer'] ?>" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                                Delete Customer
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
 </div>
+<?php include 'edit.php'; ?>
+
 <script>
-    if (document.getElementById("selection-table") && typeof simpleDatatables.DataTable !== 'undefined') {
-
-        let multiSelect = true;
-        let rowNavigation = false;
-        let table = null;
-
-        const resetTable = function() {
-            if (table) {
-                table.destroy();
-            }
-
-            const options = {
-                rowRender: (row, tr, _index) => {
-                    if (!tr.attributes) {
-                        tr.attributes = {};
-                    }
-                    if (!tr.attributes.class) {
-                        tr.attributes.class = "";
-                    }
-                    if (row.selected) {
-                        tr.attributes.class += " selected";
-                    } else {
-                        tr.attributes.class = tr.attributes.class.replace(" selected", "");
-                    }
-                    return tr;
-                }
-            };
-            if (rowNavigation) {
-                options.rowNavigation = true;
-                options.tabIndex = 1;
-            }
-
-            table = new simpleDatatables.DataTable("#selection-table", options);
-
-            // Mark all rows as unselected
-            table.data.data.forEach(data => {
-                data.selected = false;
+    document.addEventListener('DOMContentLoaded', ()=>{
+        document.querySelectorAll('[data-modal-target="modal-edit"]').forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                const customer = this.getAttribute('data-customer');
+                const singkatan = this.getAttribute('data-singkatan');
+    
+                console.log(id);
+                const modal = document.getElementById('modal-edit');
+                modal.querySelector('input[name="nama_customer"]').value = customer;
+                modal.querySelector('input[name="singkatan"]').value = singkatan;
+                modal.querySelector('form').action = '?page=customer&action=update&id=' + id;
             });
+        });
 
-            table.on("datatable.selectrow", (rowIndex, event) => {
-                event.preventDefault();
-                const row = table.data.data[rowIndex];
-                if (row.selected) {
-                    row.selected = false;
-                } else {
-                    if (!multiSelect) {
-                        table.data.data.forEach(data => {
-                            data.selected = false;
-                        });
-                    }
-                    row.selected = true;
-                }
-                table.update();
-            });
-        };
+    });
 
-
-        // Row navigation makes no sense on mobile, so we deactivate it and hide the checkbox.
-        const isMobile = window.matchMedia("(any-pointer:coarse)").matches;
-        if (isMobile) {
-            rowNavigation = false;
-        }
-
-        resetTable();
+    function confirm(id) {
+        Swal.fire({
+            title: 'Apakah Kamu Yakin ?',
+            text: "Data yang dihapus tidak dapat dikembalikan!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, hapus!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '?page=customer&action=delete&id=' + id;
+            }
+        })
     }
 </script>

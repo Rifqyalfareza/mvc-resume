@@ -1,6 +1,6 @@
 <div class="pb-8">
     <div class="flex items-center justify-between mb-8 px-8 pt-8">
-        <h2 class="text-gray-600 text-2xl font-bold ">Data Part</h2>
+        <h2 class="text-gray-600 text-2xl font-bold ">Data Source Problem</h2>
         <?php include 'create.php'; ?>
         <button type="button" data-tooltip-target="tooltip-dark-add" data-modal-target=modal-tambah data-modal-toggle=modal-tambah class="flex items-center gap-2 text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium text-sm px-2 py-2 text-center  dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">
             <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -9,7 +9,7 @@
             Create
         </button>
         <div id="tooltip-dark-add" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-            Create Part
+            Create Source Problem
             <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
@@ -39,7 +39,7 @@
                 <tr>
                     <th>
                         <span class="flex items-center  text-blue-400 hover:text-blue-600">
-                            Part
+                            Source Problem
                             <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
                             </svg>
@@ -57,36 +57,38 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($parts as $part) : ?>
+                <?php foreach ($srcs as $src) : ?>
                     <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer">
-                        <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white"><?= $part['part_name'] ?></td>
+                        <td class="font-medium text-gray-900 whitespace-nowrap dark:text-white"><?= $src['source_problem'] ?></td>
                         <td class="flex gap-2 text-center justify-center">
-                            <button type="button" 
-                                data-modal-toggle="modal-edit" 
+                            <button type="button"
                                 data-modal-target="modal-edit"
-                                data-id="<?= $part['id_part'] ?>"
-                                data-part="<?= $part['part_name'] ?>"
-                                data-tooltip-target="tooltip-edit-<?= $part['id_part'] ?>" data-tooltip-placement="top" class="bg-blue-500 hover:bg-blue-700 p-1">
+                                data-modal-toggle="modal-edit"
+                                data-tooltip-target="tooltip-edit-<?= $src['id_source'] ?>"
+                                data-tooltip-placement="top"
+                                data-id-src="<?= $src['id_source']; ?>"
+                                data-src="<?= $src['source_problem']; ?>"
+                                class="bg-blue-500 hover:bg-blue-700 p-1">
                                 <svg class="w-5 h-5 text-white " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.779 17.779 4.36 19.918 6.5 13.5m4.279 4.279 8.364-8.643a3.027 3.027 0 0 0-2.14-5.165 3.03 3.03 0 0 0-2.14.886L6.5 13.5m4.279 4.279L6.499 13.5m2.14 2.14 6.213-6.504M12.75 7.04 17 11.28" />
                                 </svg>
                             </button>
-                            <div id="tooltip-edit-<?= $part['id_part'] ?>" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                            <div id="tooltip-edit-<?= $src['id_source'] ?>" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                                 Edit Part
                                 <div class="tooltip-arrow" data-popper-arrow></div>
                             </div>
                             <a href="#" 
                                 class="bg-red-500 hover:bg-red-600 p-1" 
-                                data-tooltip-target="tooltip-delete-<?= $part['id_part'] ?>"
-                                onclick="confirm(<?= $part['id_part'] ?>)">
+                                data-tooltip-target="tooltip-delete-<?= $src['id_source'] ?>"
+                                onclick="confirm(<?= $src['id_source'] ?>)">
                                 <svg class="w-5 h-5 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z" />
                                 </svg>
                             </a>
-                            <div id="tooltip-delete-<?= $part['id_part'] ?>" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+                            <div id="tooltip-delete-<?= $src['id_source'] ?>" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
                                 Delete Part
                                 <div class="tooltip-arrow" data-popper-arrow></div>
-                            </div> 
+                            </div>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -94,21 +96,21 @@
         </table>
     </div>
 </div>
-<?php include 'edit.php';?>
+<?php include 'edit.php'; ?>
 <script>
-    document.addEventListener('DOMContentLoaded',()=>{
+    document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-modal-target="modal-edit"]').forEach(button => {
             button.addEventListener('click', function() {
-                const id = this.getAttribute('data-id');
-                const part = this.getAttribute('data-part');
-    
+                const id = this.getAttribute('data-id-src');
+                const src = this.getAttribute('data-src');
+
                 console.log(id);
                 const modal = document.getElementById('modal-edit');
-                modal.querySelector('input[name="part_name"]').value = part;
-                modal.querySelector('form').action = '?page=part&action=update&id=' + id;
+                modal.querySelector('input[name="source_problem"]').value = src;
+                modal.querySelector('form').action = '?page=src&action=update&id=' + id;
             });
-        })
-    })
+        });
+    });
     function confirm($id){
         Swal.fire({
             title: 'Apakah Kamu Yakin ?',
@@ -121,7 +123,7 @@
             cancelButtonText: 'Cancel'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '?page=part&action=delete&id=' + $id;
+                window.location.href = '?page=src&action=delete&id=' + $id;
             }
         })
     }
