@@ -124,7 +124,6 @@
                 modal.querySelector('form').action = '?page=customer&action=update&id=' + id;
             });
         });
-
     });
 
     function confirm(id) {

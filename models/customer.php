@@ -8,7 +8,7 @@ class Customer{
         $this->db = database::connect();
     }
     public function all(){
-        $stmt = $this->db->query("SELECT * FROM customer");
+        $stmt = $this->db->query("SELECT * FROM customer ORDER BY id_customer DESC");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     public function find($id){
